@@ -1,0 +1,5 @@
+#!/bin/bash
+
+freshclam
+service clamav-daemon start 
+apache2ctl -D FOREGROUND
