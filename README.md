@@ -28,7 +28,7 @@ _Based on works from [ubellavance](https://github.com/ubellavance/zendtodocker) 
 
 > [000-default.conf](./000-default.conf) => vhost apache2 (*/etc/apache2/sites-available*) \
 > [php.ini](./php.ini) => php config file (*/etc/php/7.4/*) \
-> [opcache.ini](./opcache.ini) => zend opcache config file (*/etc/php/7.4/cli/conf.d*)`
+> [opcache.ini](./opcache.ini) => zend opcache config file (*/etc/php/7.4/cli/conf.d*)
 
 ---
 
@@ -93,7 +93,7 @@ check full [preferences.php](./config/preferences.php) and especially `smtp` set
 'SMTPsetFromToSender' => FALSE,
 ```
 
-[docker]:https://img.shields.io/static/v1?label=dockerfile&message=build-0.1&color=blue&style=flat-square&logo=docker
+[docker]:https://img.shields.io/badge/dockerfile-build--0.1-blue?logo=docker
 
 [php]:https://img.shields.io/badge/php-7.4-blueviolet?logo=php
 
