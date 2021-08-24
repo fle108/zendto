@@ -10,7 +10,7 @@ jobs:
 
     runs-on: ubuntu-latest
     env:
-      tag1: '$(date +%s)'
+      tag1: $(date +%s)
 
     steps:
     - uses: actions/checkout@v2
