@@ -9,14 +9,9 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
-    env:
-      tag1: $(date +%s)
-
+    
     steps:
     - uses: actions/checkout@v2
-    
-    - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag zendto:$tag1 --tag zendto:latest
     
     - name: Login to DockerHub
       if: GitHub.event_name != 'pull_request'
@@ -24,9 +19,11 @@ jobs:
       with:
        username: ${{ secrets.DOCKERHUB_USERNAME }}
        password: ${{ secrets.DOCKERHUB_TOKEN }}
-    
-    - name: Push tagged image to dockerhub repository
-      run: docker push fle108/zendto:$tag
-    
-    - name: Push latest image to dockerhub repository
-      run: docker push fle108/zendto:latest
+       
+    - name: Build and push Docker image
+      uses: docker/build-push-action@ad44023a93711e3deb337508980b4b5e9bcdc5dc
+      with:
+        context: .
+        push: true
+        tags: fle108/zendto:$(date +%s) fle108/zendto:latest
+        
