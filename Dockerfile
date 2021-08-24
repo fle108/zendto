@@ -13,8 +13,9 @@ ENV PHP_OPCACHE_VALIDATE_TIMESTAMPS="0"
 ARG ZENDTO_VERSION=6.11-2
 
 LABEL description="Zendto docker container" \
-      tags="build-0.2" \
-      maintainer="fle108 <33028922+fle108@users.noreply.github.com>"
+      tags="latest" \
+      version="0.2" \
+      maintainer="fle108 <https://github.com/fle108>"
 
 # define locale en_US and install other locales
 RUN apt-get update && apt-get install -y locales \
