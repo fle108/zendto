@@ -25,5 +25,6 @@ jobs:
       with:
         context: .
         push: true
-        tags: fle108/zendto:$(date +%s) fle108/zendto:latest
-        
+        tags: fle108/zendto:$tag1 fle108/zendto:latest
+      env:
+        tag1: $(date +%s)
