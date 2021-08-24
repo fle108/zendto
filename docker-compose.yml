@@ -3,22 +3,22 @@ version: '3.7'
 services:
   zendto:
     container_name: zendto-dev
-    image: fle108/zendto:build-0.1
+    image: fle108/zendto:build-0.2
     ports:
       - "8080:80"
     volumes:
       - ./config:/opt/zendto/config/
       - ./data:/var/zendto/
     network_mode: bridge
-    labels:
-      - "traefik.enable=true"
-      - "traefik.http.routers.zendto.entrypoints=http"
-      - "traefik.http.routers.zendto.rule=Host(`zendto.localhost`)"
-      - "traefik.http.middlewares.zendto-https-redirect.redirectscheme.scheme=https"
-      - "traefik.http.routers.zendto.middlewares=zendto-https-redirect"
-      - "traefik.http.routers.zendto-secure.entrypoints=https"
-      - "traefik.http.routers.zendto-secure.rule=Host(`zendto.localhost`)"
-      - "traefik.http.routers.zendto-secure.tls=true"
-      - "traefik.http.routers.zendto-secure.service=zendto"
-      - "traefik.http.services.zendto.loadbalancer.server.port=80"
-      - "traefik.docker.network=bridge"  
+    #labels:
+    #  - "traefik.enable=true"
+    #  - "traefik.http.routers.zendto.entrypoints=http"
+    #  - "traefik.http.routers.zendto.rule=Host(`zendto.localhost`)"
+    #  - "traefik.http.middlewares.zendto-https-redirect.redirectscheme.scheme=https"
+    #  - "traefik.http.routers.zendto.middlewares=zendto-https-redirect"
+    #  - "traefik.http.routers.zendto-secure.entrypoints=https"
+    #  - "traefik.http.routers.zendto-secure.rule=Host(`zendto.localhost`)"
+    #  - "traefik.http.routers.zendto-secure.tls=true"
+    #  - "traefik.http.routers.zendto-secure.service=zendto"
+    #  - "traefik.http.services.zendto.loadbalancer.server.port=80"
+    #  - "traefik.docker.network=bridge"  

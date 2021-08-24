@@ -75,25 +75,28 @@ Create 1st admin user in database from container shell:
 
 ```sh
 usage:
-  
+
     /opt/zendto/bin/adduser <ZendTo preferences.php file> '<username>' '<email>' '<realname>' '<organization>'
+
+  For example:
+    /opt/zendto/bin/adduser /opt/zendto/config/preferences.php 'billg' 'billg@microsoft.com' 'Bill Gates' 'Microsoft Inc'
 ```
 
 check full [preferences.php](./config/preferences.php) and especially `smtp` set-up:
 > lines 624 to 657
 
 ```php
-'SMTPserver'   => '<your-smtp-server',
+'SMTPserver'   => '<your-smtp-server>',
 'SMTPport'     => 587,
 'SMTPsecure'   => 'tls',
-'SMTPusername' => '<smtp-user',
+'SMTPusername' => '<smtp-user>',
 'SMTPpassword' => 'password',
 'SMTPcharset'  => 'UTF-8',
 'SMTPdebug'    => false,
 'SMTPsetFromToSender' => FALSE,
 ```
 
-[docker]:https://img.shields.io/badge/dockerfile-build--0.1-blue?logo=docker
+[docker]:https://img.shields.io/badge/dockerfile-build--0.2-blue?logo=docker
 
 [php]:https://img.shields.io/badge/php-7.4-blueviolet?logo=php
 
@@ -101,6 +104,6 @@ check full [preferences.php](./config/preferences.php) and especially `smtp` set
 
 [status]:https://img.shields.io/badge/status-build-blue?logo=github
 
-[app]:https://img.shields.io/badge/zendto-6.03--5-green
+[app]:https://img.shields.io/badge/zendto-6.11--2-green
 
 [dockerhub]:https://hub.docker.com/r/fle108/zendto

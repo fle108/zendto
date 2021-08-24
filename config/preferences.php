@@ -39,7 +39,7 @@ define('NSSDROPBOX_LIB_DIR', '/opt/zendto/lib/');
 define('NSSDROPBOX_DATA_DIR','/var/zendto/');
 
 // This defines the version number, please do not change
-define('ZTVERSION','6.03-5');
+define('ZTVERSION','6.11-2');
 
 // This is for gathering nightly stats, see docs about RRD and root's crontab
 define('RRD_DATA_DIR',NSSDROPBOX_DATA_DIR.'rrd/');
@@ -72,6 +72,11 @@ $NSSDROPBOX_PREFS = array(
   'MySQLpassword'        => 'zendto',
   'MySQLdb'              => 'zendto',
 
+  // Note there is 1 important setting which cannot be set here:
+  // the location of temporary copies of new drop-offs while they
+  // are being uploaded. This is the 'upload_tmp_dir' setting in
+  // php.ini.
+  //
   // This is where your drop-offs are stored.
   // It must be on the same filesystem as /var/zendto/incoming, and
   // on preferably on the same filesystem as /var/zendto.
@@ -104,7 +109,7 @@ $NSSDROPBOX_PREFS = array(
   // The root URL of the ZendTo web app in your organisation.
   // Make this "https" if you can.
   // It must end with a "/".
-  'serverRoot'           => 'http://zendto.localhost/',
+  'serverRoot'           => 'http://zendto.soton.ac.uk/',
 
   // Keep drop-offs for at most x days before auto-deleting them.
   'numberOfDaysToRetain' => 14,
@@ -128,9 +133,17 @@ $NSSDROPBOX_PREFS = array(
 
   // If someone sends a request for a Drop-off, how long does the
   // recipient have to reply?
+  // This is the default lifetime of a request only. The user can choose
+  // a different lifetime in the "Request a Drop-off" form using the
+  // date+time pickers.
   // After this time has passed, the request is disabled & deleted.
-  // It is measured in seconds (3600 = 1 hour, 86400 = 1 day)
-  'requestTTL'           => 604800, // 1 week
+  // It is measured in seconds (for historical reasons, sorry!).
+  'requestTTL'           => 60*60*24*7, // 1 week
+
+  // This is the maximum time in the future at which a request for a
+  // Drop-off can be valid. Your users will not be able to create requests
+  // that close more than this number of days ahead.
+  'maxRequestEndDays'    => 30*3, // roughly 3 months
 
   // Requested drop-offs can be automatically encrypted with a passphrase
   // set by the person sending the request. The person who then uploads
@@ -166,9 +179,9 @@ $NSSDROPBOX_PREFS = array(
   'warnDaysBeforeDeletion' => 0,
 
   // The max size for an entire drop-off,
-  'maxBytesForDropoff'   => 21474836480, // 20 GBytes = 20*1024*1024*1024
+  'maxBytesForDropoff'   => 20*1024*1024*1024, // 20 GBytes
   // and the max size for each individual file in a drop-off
-  'maxBytesForFile'      => 21474836480, // 20 GBytes = 20*1024*1024*1024
+  'maxBytesForFile'      => 20*1024*1024*1024, // 20 GBytes
 
   // Some services (e.g. the free tier of service from Cloudflare) and
   // some anti-intrusion network appliances has a limit on the maximum
@@ -256,11 +269,6 @@ $NSSDROPBOX_PREFS = array(
   // recipients and who has picked up the drop-off and from where?
   'showRecipsOnPickup'   => FALSE,
 
-  // The unique code for a request is either three 3- or 4-letter words,
-  // or three 3-digit numbers (with leading zeros).
-  // Use either 'words' or 'numbers'
-  'wordlist'             => 'numbers',
-
   // When files are submitted in response to a request, you might want to
   // over-ride the recipient's email address to force the "files have been
   // dropped off for you" emails to go into your ticketing system's email
@@ -314,7 +322,7 @@ $NSSDROPBOX_PREFS = array(
   // 1 day, your account is locked out for 1 day and you won't be able to
   // log in for that day.
   'loginFailMax'          => 10,
-  'loginFailTime'         => 86400,
+  'loginFailTime'         => 60*60*24,
 
   // Do you want to restrict downloads to humans only? If this is false,
   // you may get a Denial of Service attack as anyone with the URL to
@@ -345,16 +353,25 @@ $NSSDROPBOX_PREFS = array(
   // when a recipient picks up the drop-off" box to be ticked by default?
   'defaultConfirmDelivery' => TRUE,
 
-  // These 5 affect the display of the "New Drop-off" form.
-  // They *only* affect the display of the 5 tick boxes.
+  // When a user sends a new drop-off, do you want the "create one-time
+  // links" tick box to be ticked by default?
+  'defaultOneTimeLinks' => FALSE,
+
+  // These 7 affect the display of the "New Drop-off" form.
+  // They *only* affect the display of the 6 tick boxes, and the
+  // date picker for the expiry date/time.
   // They do not affect the functionality at all.
   // They just give you a chance to stop your users changing settings,
-  // or being confused by the large number (5!) of settings available.
+  // or being confused by the large number (7!) of settings available.
+  // The last one adds a date/time picker to the Expiry date. Off by
+  // default as it doesn't look very pretty in verbose languages.
   'showEncryptionCheckbox'      => TRUE,
   'showChecksumCheckbox'        => TRUE,
   'showConfirmDeliveryCheckbox' => TRUE,
   'showEmailRecipientsCheckbox' => TRUE,
   'showEmailPasscodeCheckbox'   => TRUE,
+  'showOneTimeLinksCheckbox'    => TRUE,
+  'showExactExpiryDate'         => TRUE,
 
   // When recipients of drop-offs are picking up their files, this
   // "terms and conditions waiver" feature allows the user/administrator
@@ -431,11 +448,11 @@ $NSSDROPBOX_PREFS = array(
   //
   // The max size for a drop-off to have checksums calculated.
   // Disable this feature by setting the value to 0.
-  'maxBytesForChecksum'  => 314572800, // 300 MBytes = 300*1024*1024
+  'maxBytesForChecksum'  => 300*1024*1024, // 300 MBytes = 300*1024*1024
 
   // The max size for a drop-off to be encrypted
   // Disable this feature by setting the value to 0.
-  'maxBytesForEncryption' => 314572800, // 300 MBytes = 300*1024*1024
+  'maxBytesForEncryption' => 300*1024*1024, // 300 MBytes = 300*1024*1024
 
   // Enforce encryption. This stops the user disabling it, and also
   // makes it ignore the maxBytesForEncryption size above.
@@ -720,6 +737,17 @@ $NSSDROPBOX_PREFS = array(
   // For example, you might not have any SAML attribute corresponding to
   // 'organization', so you can set that value for all users.
   //
+  // If there are attributes such as 'displayName' for which your SAML
+  // provider offers no equivalent (Google!), you can "add" other attributes
+  // together to produce the string you want. The resulting string of
+  // attribute values will be separated by a space.
+  // So for Google you might want to use
+  //   'displayName' => 'FirstName + LastName',
+  // if you can get attributes containing those parts of their name, but
+  // no attribute that combines them.
+  // Note that the rule about "a simple fixed string" in the previous
+  // paragraph also applies here.
+  //
   // Note that the attribute for 'uid' should contain a value of the form
   //   username@your-domain.example.com
   // But if your users can change their email address, ensure the 'uid'
@@ -818,6 +846,15 @@ $NSSDROPBOX_PREFS = array(
   // To test the SSL negotiation, try something like this:
   // openssl s_client -connect ad-server.example.com:636
   //
+  // If both 'authLDAPMemberKey1' (or 2 or 3) and 'authLDAPMemberRole1' (or 2
+  // or 3) are set, then the users must be members of this group.
+  // Here is an example:
+  // 'authLDAPMemberKey1'  => 'memberOf',
+  // 'authLDAPMemberRole1' => 'cn=ztUsers,OU=securityGroups,DC=example,DC=com',
+  // 'authLDAPMemberRecurse1' decides whether it should do a full
+  // recursive search so the group can contain other groups (TRUE),
+  // or a simple search of the 'memberOf' attributes of the user (FALSE).
+  //
   // If you want to search for your user in multiple OUs in any of the
   // forests/domains, then make the authLDAPBaseDN1 (or 2 or 3) an
   // array of OUs, such as in this example:
@@ -832,6 +869,12 @@ $NSSDROPBOX_PREFS = array(
   'authLDAPBindUser1'         => 'SecretUsername1',
   'authLDAPBindPass1'         => 'SecretPassword1',
   'authLDAPOrganization1'     => 'ECS, University of Southampton',
+  'authLDAPMemberKey1'        => 'memberOf',
+  'authLDAPMemberRole1'       => '',
+  // 'authLDAPMemberRecurse1' decides whether it should do a full
+  // recursive search so the group can contain other groups (TRUE),
+  // or a simple search of the 'memberOf' attributes of the user (FALSE).
+  'authLDAPMemberRecurse1'    => TRUE,
   'authLDAPUsernameAttribute1' => 'sAMAccountName',
   // If you are not using this 2nd set of settings for a 2nd AD forest,
   // do not comment them out, but instead set them to be empty.
@@ -847,6 +890,12 @@ $NSSDROPBOX_PREFS = array(
   'authLDAPBindUser2'         => '',
   'authLDAPBindPass2'         => '',
   'authLDAPOrganization2'     => '',
+  'authLDAPMemberKey2'        => '',
+  'authLDAPMemberRole2'       => '',
+  // 'authLDAPMemberRecurse2' decides whether it should do a full
+  // recursive search so the group can contain other groups (TRUE),
+  // or a simple search of the 'memberOf' attributes of the user (FALSE).
+  'authLDAPMemberRecurse2'    => TRUE,
   'authLDAPUsernameAttribute2' => '',
   // If you are not using this 3rd set of settings for a 3rd AD forest,
   // do not comment them out, but instead set them to be empty.
@@ -861,11 +910,13 @@ $NSSDROPBOX_PREFS = array(
   'authLDAPBindUser3'         => '',
   'authLDAPBindPass3'         => '',
   'authLDAPOrganization3'     => '',
+  'authLDAPMemberKey3'        => '',
+  'authLDAPMemberRole3'       => '',
+  // 'authLDAPMemberRecurse3' decides whether it should do a full
+  // recursive search so the group can contain other groups (TRUE),
+  // or a simple search of the 'memberOf' attributes of the user (FALSE).
+  'authLDAPMemberRecurse3'    => TRUE,
   'authLDAPUsernameAttribute3' => '',
-  // If both these 2 settings are set, then the users must be members of this
-  // group/role. Please note this feature has not been rigorously tested yet.
-  // 'authLDAPMemberKey'     => 'memberOf',
-  // 'authLDAPMemberRole'    => 'cn=zendtoUsers,OU=securityGroups,DC=soton,DC=ac,DC=uk',
 
   //
   // Settings for the Multi authenticator.

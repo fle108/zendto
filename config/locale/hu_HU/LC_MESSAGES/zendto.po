@@ -23,14 +23,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ZendTo 5.00\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-09-09 09:41+0200\n"
+"POT-Creation-Date: 2021-06-18 15:27+0100\n"
 "PO-Revision-Date: 2019-08-22 11:52+0200\n"
 "Last-Translator:  Toldi Miklos <toldim76@gmail.com>\n"
 "Language-Team: US English <Jules@Zend.To>\n"
-"Language: Hungarian\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: Hungarian\n"
 "#-#-#-#-#  php-code.pot (ZendTo 5.00)  #-#-#-#-#\n"
 "#-#-#-#-#  smarty.pot  #-#-#-#-#\n"
 
@@ -52,14 +52,14 @@ msgstr "Úgy tűnik, hogy számítógépe címe megváltozott. Kattintson ismét
 msgid "Session Error"
 msgstr "Munkamenet hiba"
 
-msgid "%s has dropped off files for you"
-msgstr "%s több fájlt töltött fel az Ön számára"
-
 msgid "This feature is only available to users who have logged in."
 msgstr "Ez a szolgáltatás csak a bejelentkezett felhasználók számára érhető el."
 
 msgid "Access Denied"
 msgstr "Hozzáférés megtagadva"
+
+msgid "%s has dropped off files for you"
+msgstr "%s több fájlt töltött fel az Ön számára"
 
 msgid "Failed to read logfile. Check web server can read it."
 msgstr "A naplófájl olvasása nem sikerült. Ellenőrizze, hogy a webszerver képes-e olvasni."
@@ -72,6 +72,9 @@ msgstr "Ez csak rendszergazdák részére érhető el."
 
 msgid "Administrators only"
 msgstr "Csak rendszergazdák részére"
+
+msgid "Request"
+msgstr "Kérés"
 
 msgid "Please click again on the link you were sent to pickup your files."
 msgstr "Kattintson újra a linkre, amely el lett küldve Önnek az állományok átvételéhez."
@@ -106,20 +109,52 @@ msgstr "Fájlokat küldhet közvetlenül a főmenüből, vagy kérhet új kódot
 msgid "Request Code Used"
 msgstr "A kérelem kód már használva lett"
 
-msgid "Your Request Code has expired. Please start again."
-msgstr "Az Ön kérelem kódja lejárt. Kérem, hogy kezdje újra az egészet."
+msgid "Please ask for a new Request."
+msgstr ""
 
-msgid "Request Code Expired"
+#, fuzzy
+msgid "Your Request Code has expired."
 msgstr "A kérelem kód lejárt"
 
-msgid "Request Error"
-msgstr "Hiba a kérésben"
+msgid "Please wait for %1$s, until %2$s."
+msgstr ""
 
-msgid "Sending the request email failed."
+#, fuzzy
+msgid "Your Request Code cannot be used yet."
+msgstr "Nem található a kérelem kódja, vagy már használva lett."
+
+#, fuzzy
+msgid "Resending the request email failed."
 msgstr "A kérésről szóló e-mail küldése sikertelen."
 
 msgid "Email Error"
 msgstr "Email hiba"
+
+msgid "You cannot set the start or end time more than %d days in the future."
+msgstr ""
+
+msgid "Request Error"
+msgstr "Hiba a kérésben"
+
+msgid "The end time you set has already passed."
+msgstr ""
+
+msgid "Sending the request email failed."
+msgstr "A kérésről szóló e-mail küldése sikertelen."
+
+#, fuzzy
+msgid "Sending a request to these addresses failed"
+msgstr "A kérésről szóló e-mail küldése sikertelen."
+
+msgid "But the request to these addresses were sent:"
+msgstr ""
+
+#, fuzzy
+msgid "The Subject was:"
+msgstr "Tárgy"
+
+msgid "The Note was:"
+msgstr ""
 
 msgid "Unable to re-send the drop-off %s."
 msgstr "Nem sikerült az ismételt elküldése %s küldeménynek."
@@ -129,6 +164,9 @@ msgstr "Sikertelen ismételt küldemény elküldés"
 
 msgid "Unlocked %s."
 msgstr "Zárolás feloldva %s -nek."
+
+msgid "Security"
+msgstr ""
 
 msgid "Unknown user"
 msgstr "Ismeretlen felhasználó"
@@ -199,14 +237,24 @@ msgstr "Nem sikerül a(z) %s felhasználó jelszavának cseréje"
 msgid "Check User: Unable to connect to any of the authentication servers; could not authenticate user."
 msgstr "Felhasználó beléptetése: nem lehet csatlakozni semelyik hitelesítő szerverhez, így nem sikerült hitelesíteni a felhasználót."
 
-msgid "LDAP Error"
-msgstr "LDAP hiba"
+#, fuzzy
+msgid "Active Directory Error"
+msgstr "Azonosítási hiba"
 
-msgid "Sorry, you are not authorized to use this service."
-msgstr "Sajnálom, Ön hitelesítés nélkül nem használhatja ezt a szolgáltatást."
+msgid "Connected to %1$s but could not start_tls, it said %2$s"
+msgstr ""
+
+msgid "Connected to %1$s but could not bind with TLS, it said %2$s"
+msgstr ""
+
+msgid "Connected to %1$s but could not bind without TLS, it said %2$s"
+msgstr ""
 
 msgid "Authorization Failed"
 msgstr "Sikertelen hitelesítés"
+
+msgid "Sorry, you are not authorized to use this service."
+msgstr "Sajnálom, Ön hitelesítés nélkül nem használhatja ezt a szolgáltatást."
 
 msgid "Check User: No AD servers configured."
 msgstr "Felhasználó beléptetése: nincs elérhető AD szerver beállítva."
@@ -274,6 +322,12 @@ msgstr "Meg kell adni az értékét a következő beállításnak: %s "
 msgid "Undefined Preference Key"
 msgstr "Ismeretlen beállítás"
 
+msgid "Each file in this drop-off can only be downloaded once. They cannot be downloaded again. If needed, you can ask the sender to 'Resend' the drop-off from their %s Outbox. This will give you another chance to download the files."
+msgstr ""
+
+msgid "One-time link used"
+msgstr ""
+
 msgid "Decrypting and downloading the file failed. You probably entered the passphrase incorrectly. Please try again."
 msgstr "A fájl visszafejtése és letöltése nem sikerült. Valószínűleg hibásan írta be a jelszót. Kérem, próbálja meg újra."
 
@@ -315,6 +369,12 @@ msgstr "Hiányzik a küldeményeket tartalmazó könyvtár."
 
 msgid "Drop-off Directory Not Found"
 msgstr "A küldeményeket tartalmazó könyvtár nem található."
+
+msgid "You cannot create a drop-off from your request yet. Please wait until %s before uploading your files."
+msgstr ""
+
+msgid "The request you used to create this drop-off has expired. You will need to contact the other person again to get a new 'request for files'."
+msgstr ""
 
 msgid "Failed to read your verification information. Your drop-off session has probably expired. Please start again."
 msgstr "Nem lehet beolvasni az ellenőrző információkat. Az Ön munkamenete valószínűleg lejárt. Kérem, hogy kezdje újra."
@@ -363,6 +423,9 @@ msgstr "A kiszolgáló ideiglenes könyvtára helytelenül van beállítva."
 
 msgid "Could not read the uploaded recipients file."
 msgstr "Nem olvasható a feltöltött címlista állomány."
+
+msgid "You can only create single-use download links if there is 1 recipient."
+msgstr ""
 
 msgid "You must choose at least one file to drop-off."
 msgstr "Legalább egy állományt ki kell jelölnie küldésre."
@@ -421,8 +484,12 @@ msgstr "Hiba lépett fel az %s adatainak mentésekor."
 msgid "Library"
 msgstr "Könyvtár"
 
-msgid "Failed to send email to the recipient %s. But your drop-off has been stored with claimID %s"
-msgstr "Nem sikerült az e-mail elküldése %s címzettnek. Ellenben az állomány le lett tárolva a következő küldemény azonosítóval: %s"
+#, fuzzy
+msgid "Sending the emails to these addresses failed"
+msgstr "A kérésről szóló e-mail küldése sikertelen."
+
+msgid "But the emails to these addresses were sent:"
+msgstr ""
 
 msgid "Unable to add a drop-off record to the database."
 msgstr "Nem lehetséges a küldendő állományok rögzítése az adatbázisban."
@@ -433,17 +500,14 @@ msgstr "Nem lehetséges az adatbázis-tranzakció megkezdése."
 msgid "Unable to connect to any of the authentication servers; could not authenticate user."
 msgstr "Nem sikerült kapcsolódni egyetlen hitelesítő szerverhez sem, így a felhasználó hitelesítése sikertelen."
 
+msgid "LDAP Error"
+msgstr "LDAP hiba"
+
 msgid "0 bytes"
 msgstr "0 bájt"
 
 msgid "1 byte"
 msgstr "1 bájt"
-
-msgid "This form cannot be called like this, please return to the main menu."
-msgstr "Ez az űrlap nem elérhető erről a helyről, kérem, hogy lépjen vissza a főmenübe."
-
-msgid "Internal Error"
-msgstr "Belső hiba"
 
 msgid "You must specify your name in the form."
 msgstr "Meg kell adnia a saját e-mail címét az űrlapon."
@@ -495,6 +559,12 @@ msgstr "%d másodperc"
 
 msgid "%d seconds"
 msgstr "%d másodperc"
+
+msgid "This form cannot be called like this, please return to the main menu."
+msgstr "Ez az űrlap nem elérhető erről a helyről, kérem, hogy lépjen vissza a főmenübe."
+
+msgid "Internal Error"
+msgstr "Belső hiba"
 
 msgid "The email address you entered was invalid."
 msgstr "Az e-mail cím - amit Ön adott meg - helytelen."
@@ -646,90 +716,25 @@ msgstr "Küldemény jelszó"
 msgid "Pick-up Files"
 msgstr "Fájlok átvétele"
 
+#, fuzzy
+msgid "The request with request code %1 was successfully removed."
+msgstr "A küldemény (azonosító: %1) sikeresen el lett távolítva."
+
+#, fuzzy
+msgid "Unable to remove the request"
+msgstr "Nem lehetséges a küldemény eltávolítása"
+
+msgid "You may have already deleted it."
+msgstr "Lehet, hogy már törölve lett."
+
 msgid "The drop-off with claim ID %1 was successfully removed."
 msgstr "A küldemény (azonosító: %1) sikeresen el lett távolítva."
 
 msgid "Unable to remove the drop-off"
 msgstr "Nem lehetséges a küldemény eltávolítása"
 
-msgid "You may have already deleted it."
-msgstr "Lehet, hogy már törölve lett."
-
 msgid "This is an automated message sent to you by the %1 service."
 msgstr "Ez egy automatikus üzenet, amit a %1 szolgáltatás küldött."
-
-msgid "a file"
-msgstr "egy fájl"
-
-msgid "%1 files"
-msgstr "%1 fájlok"
-
-msgid "IF YOU TRUST THE SENDER, and are expecting to receive a file from them, you may choose to retrieve the drop-off by clicking the following link (or copying and pasting it into your web browser):"
-msgstr "HA MEGBÍZIK A FELADÓBAN, és várható küldemény tőle, akkor a következő linkre kattintva (vagy kimásolja a linket és beilleszti egy böngészőbe) letöltheti a küldeményt:"
-
-msgid ""
-"** This drop-off is encrypted. **\n"
-"To download any files you must have the correct passphrase."
-msgstr ""
-"** A küldemény titkosított. **\n"
-" A fájl(ok) letöltéséhez a helyes jelszót kell megadnia."
-
-msgid "You have %1 to retrieve the drop-off; after that the link above will expire. If you wish to contact the sender, just reply to this email."
-msgstr "Önnek %1 időtartam áll a rendelkezésére, hogy a küldeményt átvegye; utána a hivatkozás érvénytelen lesz. Ha kapcsolatba szeretne lépni a feladóval, csak válaszoljon erre az e-mailre."
-
-msgid "The sender has left you a note:"
-msgstr "A feladó az alábbi megjegyzést küldi Önnek:"
-
-msgid "Full information about the drop-off:"
-msgstr "Összes információ a küldeményről"
-
-msgid "Claim ID:          %1"
-msgstr "Küldemény azonosító:          %1"
-
-msgid "Sent separately"
-msgstr "Külön küldendő"
-
-msgid "Claim Passcode:    %1"
-msgstr "Küldemény jelszó:          %1"
-
-msgid "Date of Drop-Off:  %1"
-msgstr "Küldemény létrejöttének dátuma:  %1"
-
-msgid "Sender"
-msgstr "Küldő"
-
-msgid "Name:            %1"
-msgstr "Név:            %1"
-
-msgid "Organization:    %1"
-msgstr "Szervezet:      %1"
-
-msgid "Email Address:   %1"
-msgstr "E-mail cím:     %1"
-
-msgid "IP Address:      %1  %2"
-msgstr "IP cím:000      %1  %2"
-
-msgid "File"
-msgstr "Állomány"
-
-msgid "Files"
-msgstr "Állományok"
-
-msgid "Name:             %1"
-msgstr "Név:            %1"
-
-msgid "Description:      %1"
-msgstr "Leírás:            %1"
-
-msgid "Size:             %1"
-msgstr "Méret:            %1"
-
-msgid "SHA-256 Checksum: %1"
-msgstr "SHA-256 ellenőrző összeg: %1"
-
-msgid "Content Type:     %1"
-msgstr "Tartalom típus: %1"
 
 msgid "This is a reminder about a drop-off sent to you, that no one has picked up."
 msgstr "Ez egy emlékeztető az Ön számára elküldött küldeményről, amely még nem lett letöltve."
@@ -755,8 +760,20 @@ msgstr "Önnek %1 időtartam áll a rendelkezésére, hogy a küldeményt átveg
 msgid "If you wish to contact the sender, just reply to this email."
 msgstr "Ha kapcsolatba szeretne lépni a feladóval, csak válaszoljon erre az e-mailre."
 
+msgid "The sender has left you a note:"
+msgstr "A feladó az alábbi megjegyzést küldi Önnek:"
+
+msgid "Full information about the drop-off:"
+msgstr "Összes információ a küldeményről"
+
+msgid "Sent separately"
+msgstr "Külön küldendő"
+
 msgid "Date of Drop-off"
 msgstr "Küldemény létrejöttének dátuma"
+
+msgid "Sender"
+msgstr "Küldő"
 
 msgid "Name"
 msgstr "Név"
@@ -770,6 +787,12 @@ msgstr "E-mail cím"
 msgid "IP Address"
 msgstr "IP cím"
 
+msgid "File"
+msgstr "Állomány"
+
+msgid "Files"
+msgstr "Állományok"
+
 msgid "Description"
 msgstr "Leírás"
 
@@ -781,6 +804,61 @@ msgstr "SHA-256 ellenőrző összeg"
 
 msgid "Content Type"
 msgstr "Tartalom típus"
+
+msgid "a file"
+msgstr "egy fájl"
+
+msgid "%1 files"
+msgstr "%1 fájlok"
+
+msgid "IF YOU TRUST THE SENDER, and are expecting to receive a file from them, you may choose to retrieve the drop-off by clicking the following link (or copying and pasting it into your web browser):"
+msgstr "HA MEGBÍZIK A FELADÓBAN, és várható küldemény tőle, akkor a következő linkre kattintva (vagy kimásolja a linket és beilleszti egy böngészőbe) letöltheti a küldeményt:"
+
+msgid ""
+"** This drop-off is encrypted. **\n"
+"To download any files you must have the correct passphrase."
+msgstr ""
+"** A küldemény titkosított. **\n"
+" A fájl(ok) letöltéséhez a helyes jelszót kell megadnia."
+
+msgid "You have %1 to retrieve the drop-off; after that the link above will expire. If you wish to contact the sender, just reply to this email."
+msgstr "Önnek %1 időtartam áll a rendelkezésére, hogy a küldeményt átvegye; utána a hivatkozás érvénytelen lesz. Ha kapcsolatba szeretne lépni a feladóval, csak válaszoljon erre az e-mailre."
+
+msgid "Claim ID:          %1"
+msgstr "Küldemény azonosító:          %1"
+
+msgid "Claim Passcode:    %1"
+msgstr "Küldemény jelszó:          %1"
+
+msgid "Date of Drop-Off:  %1"
+msgstr "Küldemény létrejöttének dátuma:  %1"
+
+msgid "Name:            %1"
+msgstr "Név:            %1"
+
+msgid "Organization:    %1"
+msgstr "Szervezet:      %1"
+
+msgid "Email Address:   %1"
+msgstr "E-mail cím:     %1"
+
+msgid "IP Address:      %1  %2"
+msgstr "IP cím:000      %1  %2"
+
+msgid "Name:             %1"
+msgstr "Név:            %1"
+
+msgid "Description:      %1"
+msgstr "Leírás:            %1"
+
+msgid "Size:             %1"
+msgstr "Méret:            %1"
+
+msgid "SHA-256 Checksum: %1"
+msgstr "SHA-256 ellenőrző összeg: %1"
+
+msgid "Content Type:     %1"
+msgstr "Tartalom típus: %1"
 
 msgid "Picked up"
 msgstr "Átvétel"
@@ -917,9 +995,6 @@ msgstr "Kezdőlap"
 msgid "Inbox"
 msgstr "Beérkező"
 
-msgid "Last %1 lines of %2 log, most recent first"
-msgstr "A(z) %2 napló utolsó %1 bejegyzése, ahol a legutóbbi van elöl"
-
 msgid "Please login above."
 msgstr "Kérem, hogy jelentkezzen be fent."
 
@@ -934,6 +1009,9 @@ msgstr "A nagyobb biztonság érdekében lépjen ki a böngészőből, vagy lega
 
 msgid "You will be redirected to the <a href=\"%1\">main menu</a> in a moment."
 msgstr "Ön pillanatokon belül a <a href=\"%1\">főmenübe</a> fog jutni."
+
+msgid "Last %1 lines of %2 log, most recent first"
+msgstr "A(z) %2 napló utolsó %1 bejegyzése, ahol a legutóbbi van elöl"
 
 msgid "You are using an old unsupported version of Internet Explorer."
 msgstr "Ön az Internet Explorer nem támogatott verzióját használja."
@@ -1055,6 +1133,10 @@ msgstr "Kattintson a Fájl hozzáadásra vagy helyezze ide az állományokat"
 msgid "If you leave this page, you will abandon this drop-off."
 msgstr "Ha távozik erről a lapról, a küldemény elkészítése megszakad."
 
+#, fuzzy
+msgid "At most %1."
+msgstr "%1 -ről"
+
 msgid "This number can include a decimal point, it does not have to be a whole number."
 msgstr ""
 
@@ -1103,6 +1185,9 @@ msgstr "A(z) __NUMBER__ állomány nagyobb, mint a maximális állományméret, 
 msgid "Drop-off expiry time must be a number of days, at most %1."
 msgstr ""
 
+msgid "You can only limit the drop-off to 1 download if there is only 1 recipient."
+msgstr ""
+
 msgid "Scanning"
 msgstr "Tesztelés"
 
@@ -1136,10 +1221,12 @@ msgstr "A felöltött állományokat a %1 víruskeresővel átvizsgálta. Ettől
 msgid "Users are also <strong>strongly encouraged</strong> to encrypt every file if any contain sensitive information (e.g. personal private information)!"
 msgstr "A felhasználóknak <strong>kifejezetten javasolt</strong>, hogy titkosítsanak minden állományt, különösen akkor, ha azok érzékeny információkat (pl. személyes adatokat) tartalmaznak!"
 
-msgid "This web page will allow you to drop-off (upload) one or more files for anyone (either a %1 user or others). The recipient will receive an automated email containing the information you enter below and instructions for downloading the file. Your IP address will also be logged and sent to the recipient for identity confirmation purposes."
+#, fuzzy
+msgid "Use this form to drop-off (upload) one or more files for anyone (either a %1 user or others). The recipient will receive an automated email containing the information you enter below and instructions for downloading the file. Your IP address will also be logged and sent to the recipient for identity confirmation purposes."
 msgstr "Ez a weboldal lehetővé teszi, hogy bárkinek (akár %1 felhasználóinak, akár másoknak) egy vagy több fájlt küldhessen. A címzett automatikus e-mailt fog kapni, amely tartalmazza az alább megadott információkat és a fájl letöltésére vonatkozó utasításokat. Az Ön IP-címét szintén naplózza és elküldi a címzettnek személyazonosság-megerősítés céljából."
 
-msgid "This web page will allow you to drop-off (upload) one or more files for a %1 user. The recipient will receive an automated email containing the information you enter below and instructions for downloading the file. Your IP address will also be logged and sent to the recipient for identity confirmation purposes."
+#, fuzzy
+msgid "Use this form to drop-off (upload) one or more files for a %1 user. The recipient will receive an automated email containing the information you enter below and instructions for downloading the file. Your IP address will also be logged and sent to the recipient for identity confirmation purposes."
 msgstr "Ez a weboldal lehetővé teszi, hogy %1 felhasználóinak egy vagy több fájlt küldhessen. A címzett automatikus e-mailt fog kapni, amely tartalmazza az alább megadott információkat és a fájl letöltésére vonatkozó utasításokat. Az Ön IP-címét szintén naplózza és elküldi a címzettnek személyazonosság-megerősítés céljából."
 
 msgid "From"
@@ -1169,8 +1256,14 @@ msgstr "amely tartalmazza küldemény azonosítóját és a hozzá tartozó jels
 msgid "Recipients must agree to terms and conditions"
 msgstr "A címzetteknek el kell fogadniuk a felhasználási feltételeket"
 
+msgid "Allow only 1 download"
+msgstr "Csak 1 letöltés engedélyezése"
+
+msgid "days until drop-off expires at"
+msgstr "napig, amíg a lemondás lejár"
+
 msgid "days until drop-off expires"
-msgstr ""
+msgstr "napig a lemondás lejártáig"
 
 msgid "Add Recipients"
 msgstr "Címzettek hozzáadása"
@@ -1250,26 +1343,20 @@ msgstr "(Csak másolás történik, nem mozgatás)"
 msgid "No file was chosen for download."
 msgstr "Nem választott ki állományt letöltésre."
 
+msgid "Please prove you are a person"
+msgstr "Kérem, hogy igazolja, hogy Ön létező személy"
+
+msgid "To confirm that you are a <em>real</em> person (and not a computer), please complete the quick challenge below then click \"Pick-up Files\":"
+msgstr "Annak megerősítéséhez, hogy Ön <em>létező</em> személy (nem pedig robot), kérem, hogy töltse ki az alábbi rövid tesztet, majd kattintson a \"Fájlok átvétele\" gombra:"
+
 msgid "The drop-off you made (claim ID: %1) has been picked-up."
 msgstr "Az Ön által feladott küldeményt (küldemény azonosító: %1) átvették."
 
-msgid "The file %1 was picked up."
-msgstr "A(z) %1 állományt letöltötték."
+msgid "The file \"<span class=\"mono\">%1</span>\" was picked up."
+msgstr "A(z) \"<span class=\"mono\">%1</span>\" állományt letöltötték."
 
 msgid "%1 made the pick-up from %2."
 msgstr "%1 címzett átvette a küldeményt (IP címe vagy kiszolgáló neve: %2)."
-
-msgid "The file %1 was picked up by %2."
-msgstr "A(z) %1 állományt letöltötte %2 címzett."
-
-msgid "You will not be notified about any further pick-ups of files in this drop-off by this recipient."
-msgstr "Ön nem fog értesítést kapni a küldemény többi részének letöltéséről."
-
-msgid "Note"
-msgstr "Megjegyzés"
-
-msgid "The file \"<span class=\"mono\">%1</span>\" was picked up."
-msgstr "A(z) \"<span class=\"mono\">%1</span>\" állományt letöltötték."
 
 msgid "The file \"<span class=\"mono\">%1</span>\" was picked up by %2."
 msgstr "A(z) \"<span class=\"mono\">%1</span>\" állományt letöltötte %2."
@@ -1277,8 +1364,17 @@ msgstr "A(z) \"<span class=\"mono\">%1</span>\" állományt letöltötte %2."
 msgid "Note: You will not be notified about any further pick-ups of files in this drop-off by this recipient."
 msgstr "Megjegyzés: Ön nem fog értesítést kapni a küldemény többi részének letöltéséről."
 
-msgid "There are no drop-offs available for you at this time."
-msgstr "Jelenleg Önnek nincs küldeménye"
+msgid "Note"
+msgstr "Megjegyzés"
+
+msgid "The file %1 was picked up."
+msgstr "A(z) %1 állományt letöltötték."
+
+msgid "The file %1 was picked up by %2."
+msgstr "A(z) %1 állományt letöltötte %2 címzett."
+
+msgid "You will not be notified about any further pick-ups of files in this drop-off by this recipient."
+msgstr "Ön nem fog értesítést kapni a küldemény többi részének letöltéséről."
 
 msgid "Global Drop-off List"
 msgstr "Globális küldemény lista"
@@ -1286,50 +1382,8 @@ msgstr "Globális küldemény lista"
 msgid "There are no drop-offs available at this time."
 msgstr "Jelenleg nincsenek küldemények."
 
-msgid "Please prove you are a person"
-msgstr "Kérem, hogy igazolja, hogy Ön létező személy"
-
-msgid "To confirm that you are a <em>real</em> person (and not a computer), please complete the quick challenge below then click \"Pick-up Files\":"
-msgstr "Annak megerősítéséhez, hogy Ön <em>létező</em> személy (nem pedig robot), kérem, hogy töltse ki az alábbi rövid tesztet, majd kattintson a \"Fájlok átvétele\" gombra:"
-
-msgid "Send the Request"
-msgstr "Kérelem elküldése"
-
-msgid "Show the Link"
-msgstr "Hivatkozás megmutatása"
-
-msgid "Please enter the recipient's name first!"
-msgstr "Először adja meg a címzett nevét!"
-
-msgid "Please enter the recipient's email address first!"
-msgstr "Először adja meg a címzett e-mail címét!"
-
-msgid "Please enter the email subject first!"
-msgstr "Először adja meg az e-mail tárgyát! "
-
-msgid "Your note is too long!"
-msgstr "A megjegyzés túl hosszú!"
-
-msgid "Optional: if you select this and set a passphrase, the drop-off will be encrypted. The person sending the files will never know the passphrase."
-msgstr "Opcionális: ha ezt kiválasztja és jelszót állít be, akkor a küldemény titkosítva lesz. Az állományokat küldő személy soha nem fogja tudni a jelszót."
-
-msgid "This is normally selected. If you deselect it, the link and instructions will not be sent by email. Instead you will just be shown the link they need, so you can send it by other means."
-msgstr "Ez általában ki van választva. Ha kikapcsolja, akkor az elérést biztosító hivatkozás és az utasítások nem lesznek e-mailben elküldve. Ehelyett csak képernyőn lesz látható a hivatkozás, amelyet más módon is elküldhet."
-
-msgid "This web page will allow you to send a request to one of more other people requesting that they send (upload) one or more files for you.  The recipient will receive an automated email containing the information you enter below and instructions for uploading the file(s)."
-msgstr "Ez a weboldal lehetővé teszi, hogy egy másik személynek kérést küldjön, amelyben arra kéri, hogy küldjön (töltsön fel) egy vagy több fájlt az Ön számára. A címzett egy automatikus e-mailt fog kapni, amely tartalmazza az alább megadott információkat és utasításokat arra, hogyan töltse fel az állományt vagy állományokat."
-
-msgid "Email(s)"
-msgstr "Email címe(ek)"
-
-msgid "Send email"
-msgstr "E-mail küldése"
-
-msgid "This will be sent to the recipient. It will also be included in the resulting drop-off sent to you."
-msgstr "Ez elküldésre kerül a címzettnek, illetve bele kerül az Ön számára elküldött küldeménybe is."
-
-msgid "Do not lose or forget this passphrase!"
-msgstr "Ne felejtse el ezt a jelszót!"
+msgid "There are no drop-offs available for you at this time."
+msgstr "Jelenleg Önnek nincs küldeménye"
 
 msgid "This is a request from %1 of %2."
 msgstr "Ez egy kérelem, amelyet %1 küldött a(z) %2 -től."
@@ -1340,8 +1394,12 @@ msgstr "ez egy kérelem, amely %1 küldött."
 msgid "Please click on the link below and drop off the file or files I have requested."
 msgstr "Kattintson az alábbi hivatkozásra, és adja hozzá a kért állományt vagy állományokat."
 
-msgid "The link is only valid for %1 from the time of this email."
+#, fuzzy
+msgid "The link is only valid from %1 to %2."
 msgstr "A hivatkozás csak %1 -ig érvényes az e-mail küldésének dátumától számítva."
+
+msgid "After that time it will automatically expire."
+msgstr ""
 
 msgid "All files you upload will be automatically encrypted."
 msgstr "Az összes állomány automatikusan titkosítva lesz."
@@ -1361,11 +1419,15 @@ msgstr "Kimásolva"
 msgid "The request for a Drop-off has been sent to %1 at %2."
 msgstr "A kérelem el lett küldve %1 címzettnek %2 címre."
 
-msgid "It is valid for %1."
+#, fuzzy
+msgid "It is valid from %1 to %2."
 msgstr "A kérelem %1 -ig érvényes."
 
 msgid "The files they send you will be encrypted with the passphrase you just entered. Do not lose it or you will not be able to access the files!"
 msgstr "Az Ön által elküldött állományok a megadott jelszóval titkosítva lesznek. A jelszót mindenképpen őrizze meg, mert anélkül nem lehet elérni az állományokat! "
+
+msgid "You can see outstanding requests highlighted in yellow in your Inbox."
+msgstr ""
 
 msgid "If the recipient wants to send files to you before their request arrives, they should"
 msgstr "Ha a címzett állományokat akar küldeni, mielőtt a kérelem megérkezik, akkor"
@@ -1390,6 +1452,72 @@ msgstr "A kérelem elkészült %1 -nek %2 címmel."
 
 msgid "The link to give them is %1"
 msgstr "A szükséges hivatkozás a következő: %1"
+
+msgid "Send the Request"
+msgstr "Kérelem elküldése"
+
+msgid "Show the Link"
+msgstr "Hivatkozás megmutatása"
+
+msgid "Please enter the recipient's email address first!"
+msgstr "Először adja meg a címzett e-mail címét!"
+
+msgid "Please enter the email subject first!"
+msgstr "Először adja meg az e-mail tárgyát! "
+
+msgid "Your note is too long!"
+msgstr "A megjegyzés túl hosszú!"
+
+#, fuzzy
+msgid "Your request must expire after it starts!"
+msgstr "Az Ön kérelem kódja lejárt. Kérem, hogy kezdje újra az egészet."
+
+msgid "Optional: if you select this and set a passphrase, the drop-off will be encrypted. The person sending the files will never know the passphrase."
+msgstr "Opcionális: ha ezt kiválasztja és jelszót állít be, akkor a küldemény titkosítva lesz. Az állományokat küldő személy soha nem fogja tudni a jelszót."
+
+msgid "This is normally selected. If you deselect it, the link and instructions will not be sent by email. Instead you will just be shown the link they need, so you can send it by other means."
+msgstr "Ez általában ki van választva. Ha kikapcsolja, akkor az elérést biztosító hivatkozás és az utasítások nem lesznek e-mailben elküldve. Ehelyett csak képernyőn lesz látható a hivatkozás, amelyet más módon is elküldhet."
+
+msgid "Multiple email addresses should be separated with a comma \",\" or semicolon \";\". Each recipient will be sent a different link."
+msgstr ""
+
+#, fuzzy
+msgid "Use this form to send a request to one of more other people requesting that they send (upload) one or more files for you.  The recipient will receive an automated email containing the information you enter below and instructions for uploading the file(s)."
+msgstr "Ez a weboldal lehetővé teszi, hogy egy másik személynek kérést küldjön, amelyben arra kéri, hogy küldjön (töltsön fel) egy vagy több fájlt az Ön számára. A címzett egy automatikus e-mailt fog kapni, amely tartalmazza az alább megadott információkat és utasításokat arra, hogyan töltse fel az állományt vagy állományokat."
+
+#, fuzzy
+msgid "Unless you change the dates or times below, the request created will be valid for %1."
+msgstr "A létrehozott kérés %1 lesz érvényes."
+
+msgid "Email(s)"
+msgstr "Email címe(ek)"
+
+#, fuzzy
+msgid "Name: adds to your address book"
+msgstr "Hozzáadja a címjegyzékhez"
+
+#, fuzzy
+msgid "One or more email addresses"
+msgstr "Az Ön e-mail címe"
+
+msgid "Subject line of the email"
+msgstr ""
+
+#, fuzzy
+msgid "Drop-off must occur between"
+msgstr "A küldemény nincs titkosítva"
+
+msgid "and"
+msgstr "és"
+
+msgid "This will be sent to the recipient. It will also be included in the resulting drop-off sent to you."
+msgstr "Ez elküldésre kerül a címzettnek, illetve bele kerül az Ön számára elküldött küldeménybe is."
+
+msgid "Send email"
+msgstr "E-mail küldése"
+
+msgid "Do not lose or forget this passphrase!"
+msgstr "Ne felejtse el ezt a jelszót!"
 
 msgid "The drop-off was successfully re-sent to its recipients."
 msgstr "A küldemény sikeresen újra lett küldve a címzetteknek."
@@ -1421,6 +1549,9 @@ msgstr "Ezenkívül a feltöltött állományokat legfeljebb %2 napig tárolja a
 msgid "Do you really want to delete this dropoff?"
 msgstr "Valóban törölni akarja a küldeményt?"
 
+msgid "This one-time link has been used"
+msgstr ""
+
 msgid "Warning: Zip files of this size will probably not open on a Mac by double-clicking them. You will have to use another app, or else the 'unzip' or 'ditto' commands in a Terminal window."
 msgstr "Figyelem! Az ilyen méretű zip állományok valószínűleg nem nyílnak meg Mac számítógépeken dupla kattintásra. Külön alkalmazás használatával, vagy pedig parancssorból kiadott 'unzip' (esetleg 'ditto') utasítással lehet kicsomagolni az állományt."
 
@@ -1450,7 +1581,7 @@ msgstr "Küldemény tartalmának összefoglalója"
 
 msgid ""
 "This is a terms and conditions waiver that recipients must agree to.\n"
-"    <br/>To switch it on/off, see the settings <tt>showRecipientsWaiverCheckbox</tt> and <tt>defaultRecipientsWaiver</tt> in <tt>/opt/zendto/config/preferences.php</tt>.\n"
+"    <br/>To disable it, see the settings <tt>showRecipientsWaiverCheckbox</tt> and <tt>defaultRecipientsWaiver</tt> in <tt>/opt/zendto/config/preferences.php</tt>.\n"
 "    <br/>It can be long and may contain HTML tags.\n"
 "    <br/>To change this text:\n"
 "    <ol>\n"
@@ -1474,15 +1605,29 @@ msgstr ""
 msgid "Your files have been sent successfully."
 msgstr "Az állományok elküldése sikerült."
 
+msgid "The recipient will only be able to download each file once.<br/>To refresh the links so they can try again, \"Resend\" the drop-off from your %1 Outbox."
+msgstr "A címzett minden fájlt csak egyszer tölthet le.<br/>A hivatkozások frissítéséhez, hogy újra megpróbálhassák, \"küldje el újra\" a legördülő listát a %1 Kimenő mappából."
+
 msgid "This drop-off is encrypted."
 msgstr "A küldemény titkosítva van."
+
+msgid "This drop-off was set to be downloaded only once, and all the files in it have now been downloaded once."
+msgstr "Ezt a legördülést csak egyszer állították be, és a benne lévő összes fájlt egyszer letöltötték."
 
 msgid "Click on a filename to download that file."
 msgstr "Kattintson az állomány nevére, hogy letöltse azt."
 
-#, fuzzy
 msgid "This drop-off will expire in %1."
-msgstr "A küldemény titkosítva van."
+msgstr "Ez a lemondás %1 múlva lejár."
+
+msgid "Note: you may only download each file once. Struck-out files have already been downloaded."
+msgstr "Megjegyzés: minden fájlt csak egyszer tölthet le. A kihúzott fájlokat már letöltötte."
+
+msgid "This drop-off only allows 1 download of each file."
+msgstr "Ez a legördülő menü csak egy fájl letöltését teszi lehetővé."
+
+msgid "To refresh the links so they can try to download them again, click the \"Resend Dropoff\" button above."
+msgstr "A hivatkozások frissítéséhez, hogy újra megpróbálhassák letölteni őket, kattintson a fenti \"Visszaadás újra\" gombra."
 
 msgid "%1 file"
 msgstr "%1 állomány"
@@ -1526,6 +1671,30 @@ msgstr "címzett"
 msgid "None of the files has been picked-up yet."
 msgstr "Még senki sem vette át a küldeményt."
 
+msgid "Do you really want to delete this request?"
+msgstr "Tényleg törölni kívánja ezt a kérést?"
+
+msgid "Delete Request"
+msgstr "Kérés törlése"
+
+msgid "Resend Request"
+msgstr "Kérelem újraküldése"
+
+msgid "Request Summary"
+msgstr "Kérjen összefoglalót"
+
+msgid "For the recipient."
+msgstr "A címzett számára."
+
+msgid "It will also be included in the resulting drop-off sent to you."
+msgstr "Ez az Önnek küldött lemondásba is beletartozik."
+
+msgid "To send the request to someone, send them this link %1, or else the Request code:"
+msgstr "Ha el akarja küldeni a kérelmet valakinek, küldje el neki ezt a linket:% 1, vagy pedig a Kérés kódot:"
+
+msgid "Request code"
+msgstr "Kérjen kódot"
+
 msgid "View stats for the"
 msgstr "Statisztika megtekintése"
 
@@ -1567,6 +1736,21 @@ msgstr "A kijelölt felhasználók feloldása"
 
 msgid "There are no locked users."
 msgstr "Nincsenek zárolt felhasználók."
+
+msgid "You have asked us to send you this message so that you can drop-off some files for someone."
+msgstr "Ezt az üzenetet az Ön kérésére küldjük,hogy feltölthessen állományokat valamely felhasználónknak."
+
+msgid "IGNORE THIS MESSAGE IF YOU WERE NOT IMMEDIATELY EXPECTING IT!"
+msgstr "Ha nem kért ilyen szolgáltatást, akkor azonnal törölje ezt a levelet!"
+
+msgid "Otherwise, continue the process by clicking the following link (or copying and pasting it into your web browser):"
+msgstr "Ha használni kívánja ezt a szolgáltatást, akkor kattintson az alábbi linkre (vagy másolja be ezt a linket egy web böngészőbe):"
+
+msgid "Now wait for the email message from the %1 service to arrive and click on the link in it."
+msgstr "Most várja meg, amíg megérkezik a %1 szolgáltatástól az e-mail üzenet, és kattintson a benne található linkre."
+
+msgid "You will be directed to the <a href=\"%1\">main menu</a> in a moment."
+msgstr "Egy pillanat alatt a <a href=\"%1\">főmenübe</a> kerül."
 
 msgid "Please enter your Request Code before submitting."
 msgstr "Kérem, hogy adja meg a kérelem kódját küldés előtt."
@@ -1616,20 +1800,12 @@ msgstr "Amikor megérkezik, kattintson rá az elküldött hivatkozásra."
 msgid "Send confirmation"
 msgstr "Megerősítés küldése"
 
-msgid "You have asked us to send you this message so that you can drop-off some files for someone."
-msgstr "Ezt az üzenetet az Ön kérésére küldjük,hogy feltölthessen állományokat valamely felhasználónknak."
+#, fuzzy
+#~ msgid "Failed to send email to the recipient %s (%d). But your drop-off has been stored with claimID %s"
+#~ msgstr "Nem sikerült az e-mail elküldése %s címzettnek. Ellenben az állomány le lett tárolva a következő küldemény azonosítóval: %s"
 
-msgid "IGNORE THIS MESSAGE IF YOU WERE NOT IMMEDIATELY EXPECTING IT!"
-msgstr "Ha nem kért ilyen szolgáltatást, akkor azonnal törölje ezt a levelet!"
-
-msgid "Otherwise, continue the process by clicking the following link (or copying and pasting it into your web browser):"
-msgstr "Ha használni kívánja ezt a szolgáltatást, akkor kattintson az alábbi linkre (vagy másolja be ezt a linket egy web böngészőbe):"
-
-msgid "Now wait for the email message from the %1 service to arrive and click on the link in it."
-msgstr "Most várja meg, amíg megérkezik a %1 szolgáltatástól az e-mail üzenet, és kattintson a benne található linkre."
-
-msgid "You will be directed to the <a href=\"%1\">main menu</a> in a moment."
-msgstr "Egy pillanat alatt a <a href=\"%1\">főmenübe</a> kerül."
+#~ msgid "Please enter the recipient's name first!"
+#~ msgstr "Először adja meg a címzett nevét!"
 
 #~ msgid "%1 <%2> has dropped off %3 for you."
 #~ msgstr "%1 <%2> küldött Önnek %3 fájlt."

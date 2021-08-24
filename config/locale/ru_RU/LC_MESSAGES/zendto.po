@@ -23,14 +23,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ZendTo 5.00\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-09-09 09:41+0200\n"
+"POT-Creation-Date: 2021-06-18 15:27+0100\n"
 "PO-Revision-Date: 2020-01-02 11:43+0100\n"
 "Last-Translator: Dizzy Easy <dizzy.easy49@gmail.com>\n"
 "Language-Team: Русский язык <dizzy.easy49@gmail.com>\n"
-"Language: ru_RU\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: ru_RU\n"
 "X-Generator: Poedit 2.2.4\n"
 
 msgid "Please click again on the link you were sent to pick-up your files."
@@ -51,14 +51,14 @@ msgstr "Адрес вашего компьютера был изменен. На
 msgid "Session Error"
 msgstr "Ошибка сеанса"
 
-msgid "%s has dropped off files for you"
-msgstr "%s оставил для вас файлы"
-
 msgid "This feature is only available to users who have logged in."
 msgstr "Эта функция доступна только для пользователей, которые вошли в систему."
 
 msgid "Access Denied"
 msgstr "Доступ запрещен"
+
+msgid "%s has dropped off files for you"
+msgstr "%s оставил для вас файлы"
 
 msgid "Failed to read logfile. Check web server can read it."
 msgstr "Считывание файлов не получилось. Проверьте, может ли веб-сервис считывать."
@@ -71,6 +71,9 @@ msgstr "Доступно только для администраторов."
 
 msgid "Administrators only"
 msgstr "Только администраторы"
+
+msgid "Request"
+msgstr "Запрос"
 
 msgid "Please click again on the link you were sent to pickup your files."
 msgstr "Нажмите, пожалуйста, еще раз на ссылку, которую вам отправили для получения ваших файлов."
@@ -105,20 +108,52 @@ msgstr "Вы все еще можете отправлять файлы прям
 msgid "Request Code Used"
 msgstr "Код запроса использован"
 
-msgid "Your Request Code has expired. Please start again."
-msgstr "Ваш срок действия кода запроса истек. Пожалуйста, начните снова."
+msgid "Please ask for a new Request."
+msgstr ""
 
-msgid "Request Code Expired"
+#, fuzzy
+msgid "Your Request Code has expired."
 msgstr "Ваш срок действия кода запроса истек"
 
-msgid "Request Error"
-msgstr "Ошибка запроса"
+msgid "Please wait for %1$s, until %2$s."
+msgstr ""
 
-msgid "Sending the request email failed."
+#, fuzzy
+msgid "Your Request Code cannot be used yet."
+msgstr "Ваш код запроса не найден или уже был использован."
+
+#, fuzzy
+msgid "Resending the request email failed."
 msgstr "Не удалось отправить запрос по электронной почте."
 
 msgid "Email Error"
 msgstr "Проблема с отправкой электронной почты"
+
+msgid "You cannot set the start or end time more than %d days in the future."
+msgstr ""
+
+msgid "Request Error"
+msgstr "Ошибка запроса"
+
+msgid "The end time you set has already passed."
+msgstr ""
+
+msgid "Sending the request email failed."
+msgstr "Не удалось отправить запрос по электронной почте."
+
+#, fuzzy
+msgid "Sending a request to these addresses failed"
+msgstr "Не удалось отправить запрос по электронной почте."
+
+msgid "But the request to these addresses were sent:"
+msgstr ""
+
+#, fuzzy
+msgid "The Subject was:"
+msgstr "Тема"
+
+msgid "The Note was:"
+msgstr ""
 
 msgid "Unable to re-send the drop-off %s."
 msgstr "Не удается повторно отправить Отправку %s."
@@ -128,6 +163,9 @@ msgstr "Не удается повторно отправить Отправку
 
 msgid "Unlocked %s."
 msgstr "Разблокировано %s."
+
+msgid "Security"
+msgstr ""
 
 msgid "Unknown user"
 msgstr "Неизвестный пользователь"
@@ -198,14 +236,24 @@ msgstr "Не удалось обновить пароль для пользов�
 msgid "Check User: Unable to connect to any of the authentication servers; could not authenticate user."
 msgstr "Проверка пользователя: не удалось подключиться ни к одному из серверов проверки подлинности; не удалось выполнить проверку подлинности пользователя."
 
-msgid "LDAP Error"
-msgstr "LDAP ошибка"
+#, fuzzy
+msgid "Active Directory Error"
+msgstr "Ошибка аутентификации"
 
-msgid "Sorry, you are not authorized to use this service."
-msgstr "К сожалению, у вас нет полномочий на использование этого сервиса."
+msgid "Connected to %1$s but could not start_tls, it said %2$s"
+msgstr ""
+
+msgid "Connected to %1$s but could not bind with TLS, it said %2$s"
+msgstr ""
+
+msgid "Connected to %1$s but could not bind without TLS, it said %2$s"
+msgstr ""
 
 msgid "Authorization Failed"
 msgstr "Ошибка авторизации"
+
+msgid "Sorry, you are not authorized to use this service."
+msgstr "К сожалению, у вас нет полномочий на использование этого сервиса."
 
 msgid "Check User: No AD servers configured."
 msgstr "Проверка пользователя: AD серверы не настроены."
@@ -273,6 +321,12 @@ msgstr "Необходимо указать значение для следую
 msgid "Undefined Preference Key"
 msgstr "Неопределенный ключ предпочтения"
 
+msgid "Each file in this drop-off can only be downloaded once. They cannot be downloaded again. If needed, you can ask the sender to 'Resend' the drop-off from their %s Outbox. This will give you another chance to download the files."
+msgstr ""
+
+msgid "One-time link used"
+msgstr ""
+
 msgid "Decrypting and downloading the file failed. You probably entered the passphrase incorrectly. Please try again."
 msgstr "Не удалось расшифровать и загрузить файл. Возможно, вы неправильно ввели пароль. Пожалуйста, попробуйте еще раз."
 
@@ -314,6 +368,12 @@ msgstr "Каталог, содержащий файлы для этой Отпр
 
 msgid "Drop-off Directory Not Found"
 msgstr "Каталог Drop-off не найден"
+
+msgid "You cannot create a drop-off from your request yet. Please wait until %s before uploading your files."
+msgstr ""
+
+msgid "The request you used to create this drop-off has expired. You will need to contact the other person again to get a new 'request for files'."
+msgstr ""
 
 msgid "Failed to read your verification information. Your drop-off session has probably expired. Please start again."
 msgstr "Не удалось прочитать информацию о проверке. Ваш сеанс, вероятно, истек. Пожалуйста, начните снова."
@@ -363,6 +423,9 @@ msgstr "Временная папка сервера настроена непр
 
 msgid "Could not read the uploaded recipients file."
 msgstr "Не удалось прочитать загруженный файл получателей."
+
+msgid "You can only create single-use download links if there is 1 recipient."
+msgstr ""
 
 msgid "You must choose at least one file to drop-off."
 msgstr "Вы должны выбрать хотя бы один файл для отправки."
@@ -421,8 +484,12 @@ msgstr "Проблема при попытке сохранить информа
 msgid "Library"
 msgstr "Библиотека"
 
-msgid "Failed to send email to the recipient %s. But your drop-off has been stored with claimID %s"
-msgstr "Не удалось отправить электронное письмо получателю %s. но ваше сообщение было сохранено с Идентификатором %s"
+#, fuzzy
+msgid "Sending the emails to these addresses failed"
+msgstr "Не удалось отправить запрос по электронной почте."
+
+msgid "But the emails to these addresses were sent:"
+msgstr ""
 
 msgid "Unable to add a drop-off record to the database."
 msgstr "Не удается добавить в базу данных удаленную запись."
@@ -433,17 +500,14 @@ msgstr "Не удается запустить транзакцию базы д�
 msgid "Unable to connect to any of the authentication servers; could not authenticate user."
 msgstr "Не удалось подключиться ни к одному из серверов проверки подлинности; не удалось выполнить проверку подлинности пользователя."
 
+msgid "LDAP Error"
+msgstr "LDAP ошибка"
+
 msgid "0 bytes"
 msgstr "0 байт"
 
 msgid "1 byte"
 msgstr "1 байт"
-
-msgid "This form cannot be called like this, please return to the main menu."
-msgstr "Эта форма не может быть названа таким образом, пожалуйста, вернитесь в Главное меню."
-
-msgid "Internal Error"
-msgstr "Внутрянняя ошибка"
 
 msgid "You must specify your name in the form."
 msgstr "Вы должны уточнитьваше имя в форме."
@@ -495,6 +559,12 @@ msgstr "%d секунда"
 
 msgid "%d seconds"
 msgstr "%d секунда"
+
+msgid "This form cannot be called like this, please return to the main menu."
+msgstr "Эта форма не может быть названа таким образом, пожалуйста, вернитесь в Главное меню."
+
+msgid "Internal Error"
+msgstr "Внутрянняя ошибка"
 
 msgid "The email address you entered was invalid."
 msgstr "Введенный адрес электронной почты недействителен."
@@ -646,90 +716,25 @@ msgstr "Код доступа"
 msgid "Pick-up Files"
 msgstr "Получить файл(ы)"
 
+#, fuzzy
+msgid "The request with request code %1 was successfully removed."
+msgstr "Отправка с Идентификатором %1 была успешно удалена."
+
+#, fuzzy
+msgid "Unable to remove the request"
+msgstr "Не удается удалить Отправку"
+
+msgid "You may have already deleted it."
+msgstr "Возможно, вы уже удалили это."
+
 msgid "The drop-off with claim ID %1 was successfully removed."
 msgstr "Отправка с Идентификатором %1 была успешно удалена."
 
 msgid "Unable to remove the drop-off"
 msgstr "Не удается удалить Отправку"
 
-msgid "You may have already deleted it."
-msgstr "Возможно, вы уже удалили это."
-
 msgid "This is an automated message sent to you by the %1 service."
 msgstr "Это автоматическое сообщение, отправленное вам %1 сервисом."
-
-msgid "a file"
-msgstr "файл"
-
-msgid "%1 files"
-msgstr "%1 файлы"
-
-msgid "IF YOU TRUST THE SENDER, and are expecting to receive a file from them, you may choose to retrieve the drop-off by clicking the following link (or copying and pasting it into your web browser):"
-msgstr "ЕСЛИ ВЫ ДОВЕРЯЕТЕ ОТПРАВИТЕЛЮ и ожидаете получить от него файлы, вы можете выбрать, получение Отправки, нажав на следующую ссылку (или скопировать и вставить его в свой веб-браузер):"
-
-msgid ""
-"** This drop-off is encrypted. **\n"
-"To download any files you must have the correct passphrase."
-msgstr ""
-"** Эта Отправка зашифрована. **\n"
-"Чтобы загрузить какие-либо файлы, вы должны иметь правильный пароль."
-
-msgid "You have %1 to retrieve the drop-off; after that the link above will expire. If you wish to contact the sender, just reply to this email."
-msgstr "У вас есть %1 для получения Отправки; после этого ваша ссылка истечет. Если вы хотите связаться с отправителем, просто ответьте на это письмо."
-
-msgid "The sender has left you a note:"
-msgstr "Отправитель оставил вам записку:"
-
-msgid "Full information about the drop-off:"
-msgstr "Полная информация о Отправке:"
-
-msgid "Claim ID:          %1"
-msgstr "Идентификатор:          %1"
-
-msgid "Sent separately"
-msgstr "Отправлять по отдельности"
-
-msgid "Claim Passcode:    %1"
-msgstr "Код доступа:    %1"
-
-msgid "Date of Drop-Off:  %1"
-msgstr "Дата Отправки:  %1"
-
-msgid "Sender"
-msgstr "Отправитель"
-
-msgid "Name:            %1"
-msgstr "Имя:            %1"
-
-msgid "Organization:    %1"
-msgstr "Организация:    %1"
-
-msgid "Email Address:   %1"
-msgstr "Электронная почта:   %1"
-
-msgid "IP Address:      %1  %2"
-msgstr "IP адрес:      %1  %2"
-
-msgid "File"
-msgstr "Файл"
-
-msgid "Files"
-msgstr "Файлы"
-
-msgid "Name:             %1"
-msgstr "Имя:             %1"
-
-msgid "Description:      %1"
-msgstr "Описание:      %1"
-
-msgid "Size:             %1"
-msgstr "Размер:             %1"
-
-msgid "SHA-256 Checksum: %1"
-msgstr "SHA-256 Контрольная сумма: %1"
-
-msgid "Content Type:     %1"
-msgstr "Тип контента:     %1"
 
 msgid "This is a reminder about a drop-off sent to you, that no one has picked up."
 msgstr "Это напоминание о Отправке, которую никто не принял."
@@ -755,8 +760,20 @@ msgstr "У вас есть %1 для получения Отправки; пос
 msgid "If you wish to contact the sender, just reply to this email."
 msgstr "Если вы хотите связаться с отправителем, просто ответьте на это письмо."
 
+msgid "The sender has left you a note:"
+msgstr "Отправитель оставил вам записку:"
+
+msgid "Full information about the drop-off:"
+msgstr "Полная информация о Отправке:"
+
+msgid "Sent separately"
+msgstr "Отправлять по отдельности"
+
 msgid "Date of Drop-off"
 msgstr "Дата Отправки"
+
+msgid "Sender"
+msgstr "Отправитель"
 
 msgid "Name"
 msgstr "Имя"
@@ -770,6 +787,12 @@ msgstr "Электронная почта"
 msgid "IP Address"
 msgstr "IP адрес"
 
+msgid "File"
+msgstr "Файл"
+
+msgid "Files"
+msgstr "Файлы"
+
 msgid "Description"
 msgstr "Описание"
 
@@ -781,6 +804,61 @@ msgstr "SHA-256 контрольная сумма"
 
 msgid "Content Type"
 msgstr "Тип контента"
+
+msgid "a file"
+msgstr "файл"
+
+msgid "%1 files"
+msgstr "%1 файлы"
+
+msgid "IF YOU TRUST THE SENDER, and are expecting to receive a file from them, you may choose to retrieve the drop-off by clicking the following link (or copying and pasting it into your web browser):"
+msgstr "ЕСЛИ ВЫ ДОВЕРЯЕТЕ ОТПРАВИТЕЛЮ и ожидаете получить от него файлы, вы можете выбрать, получение Отправки, нажав на следующую ссылку (или скопировать и вставить его в свой веб-браузер):"
+
+msgid ""
+"** This drop-off is encrypted. **\n"
+"To download any files you must have the correct passphrase."
+msgstr ""
+"** Эта Отправка зашифрована. **\n"
+"Чтобы загрузить какие-либо файлы, вы должны иметь правильный пароль."
+
+msgid "You have %1 to retrieve the drop-off; after that the link above will expire. If you wish to contact the sender, just reply to this email."
+msgstr "У вас есть %1 для получения Отправки; после этого ваша ссылка истечет. Если вы хотите связаться с отправителем, просто ответьте на это письмо."
+
+msgid "Claim ID:          %1"
+msgstr "Идентификатор:          %1"
+
+msgid "Claim Passcode:    %1"
+msgstr "Код доступа:    %1"
+
+msgid "Date of Drop-Off:  %1"
+msgstr "Дата Отправки:  %1"
+
+msgid "Name:            %1"
+msgstr "Имя:            %1"
+
+msgid "Organization:    %1"
+msgstr "Организация:    %1"
+
+msgid "Email Address:   %1"
+msgstr "Электронная почта:   %1"
+
+msgid "IP Address:      %1  %2"
+msgstr "IP адрес:      %1  %2"
+
+msgid "Name:             %1"
+msgstr "Имя:             %1"
+
+msgid "Description:      %1"
+msgstr "Описание:      %1"
+
+msgid "Size:             %1"
+msgstr "Размер:             %1"
+
+msgid "SHA-256 Checksum: %1"
+msgstr "SHA-256 Контрольная сумма: %1"
+
+msgid "Content Type:     %1"
+msgstr "Тип контента:     %1"
 
 msgid "Picked up"
 msgstr "Взятый"
@@ -917,9 +995,6 @@ msgstr "Дом"
 msgid "Inbox"
 msgstr "Входящие"
 
-msgid "Last %1 lines of %2 log, most recent first"
-msgstr "Последних %1 рядов %2 журнала, самый актуальный как первый"
-
 msgid "Please login above."
 msgstr "Пожалуйста, войдите в систему выше."
 
@@ -934,6 +1009,9 @@ msgstr "Для большей безопасности вы также долж�
 
 msgid "You will be redirected to the <a href=\"%1\">main menu</a> in a moment."
 msgstr "Вы будете перенаправлены в <a href=\"%1\"> главное меню</a> через мгновение."
+
+msgid "Last %1 lines of %2 log, most recent first"
+msgstr "Последних %1 рядов %2 журнала, самый актуальный как первый"
 
 msgid "You are using an old unsupported version of Internet Explorer."
 msgstr "Вы используете старую неподдерживаемую версию Internet Explorer."
@@ -1055,6 +1133,10 @@ msgstr "Кликнете, чтобы добавить файлы или пере
 msgid "If you leave this page, you will abandon this drop-off."
 msgstr "Если вы покинете эту страницу, вы откажетесь от этого сбрасывания."
 
+#, fuzzy
+msgid "At most %1."
+msgstr "О %1"
+
 msgid "This number can include a decimal point, it does not have to be a whole number."
 msgstr ""
 
@@ -1103,6 +1185,9 @@ msgstr "Файл __NUMBER__ больше максимального размер
 msgid "Drop-off expiry time must be a number of days, at most %1."
 msgstr ""
 
+msgid "You can only limit the drop-off to 1 download if there is only 1 recipient."
+msgstr ""
+
 msgid "Scanning"
 msgstr "Сканирование"
 
@@ -1136,10 +1221,12 @@ msgstr "Файлы, загруженные в %1, проверяются на н
 msgid "Users are also <strong>strongly encouraged</strong> to encrypt every file if any contain sensitive information (e.g. personal private information)!"
 msgstr "Пользователям также настоятельно рекомендуется шифровать каждый файл, если он содержит конфиденциальную информацию (например, личную информацию)!"
 
-msgid "This web page will allow you to drop-off (upload) one or more files for anyone (either a %1 user or others). The recipient will receive an automated email containing the information you enter below and instructions for downloading the file. Your IP address will also be logged and sent to the recipient for identity confirmation purposes."
+#, fuzzy
+msgid "Use this form to drop-off (upload) one or more files for anyone (either a %1 user or others). The recipient will receive an automated email containing the information you enter below and instructions for downloading the file. Your IP address will also be logged and sent to the recipient for identity confirmation purposes."
 msgstr "Эта веб-страница позволит вам отправить один или несколько файлов для любого пользователя (пользователя %1 или других пользователей). Получатель получит автоматическое электронное письмо, содержащее информацию, указанную ниже, и инструкции по загрузке файла. Ваш IP-адрес также будет зарегистрирован и отправлен получателю для подтверждения личности."
 
-msgid "This web page will allow you to drop-off (upload) one or more files for a %1 user. The recipient will receive an automated email containing the information you enter below and instructions for downloading the file. Your IP address will also be logged and sent to the recipient for identity confirmation purposes."
+#, fuzzy
+msgid "Use this form to drop-off (upload) one or more files for a %1 user. The recipient will receive an automated email containing the information you enter below and instructions for downloading the file. Your IP address will also be logged and sent to the recipient for identity confirmation purposes."
 msgstr "На этой веб-странице можно отправить один или несколько файлов для пользователя %1. Получатель получит автоматическое электронное письмо, содержащее информацию, указанную ниже, и инструкции по загрузке файла. Ваш IP-адрес также будет зарегистрирован и отправлен получателю для подтверждения личности."
 
 msgid "From"
@@ -1169,8 +1256,14 @@ msgstr "который включает Код доступа, а также И�
 msgid "Recipients must agree to terms and conditions"
 msgstr ""
 
+msgid "Allow only 1 download"
+msgstr "Разрешить только 1 загрузку"
+
+msgid "days until drop-off expires at"
+msgstr "дней до истечения срока высадки в"
+
 msgid "days until drop-off expires"
-msgstr ""
+msgstr "дней до истечения срока возврата"
 
 msgid "Add Recipients"
 msgstr "Добавить получателей"
@@ -1250,26 +1343,20 @@ msgstr "(Будет копировать, а не перемещать)"
 msgid "No file was chosen for download."
 msgstr "Не был выбран файл для загрузки."
 
+msgid "Please prove you are a person"
+msgstr "Пожалуйста, докажите, что вы человек"
+
+msgid "To confirm that you are a <em>real</em> person (and not a computer), please complete the quick challenge below then click \"Pick-up Files\":"
+msgstr "Чтобы подтвердить, что вы являетесь реальным человеком (а не компьютером), пожалуйста, выполните быструю задачу ниже, а затем нажмите кнопку \"Получить файл(ы)\":"
+
 msgid "The drop-off you made (claim ID: %1) has been picked-up."
 msgstr "Отправка (Идентификатор: %1) была получена."
 
-msgid "The file %1 was picked up."
-msgstr "Файл %1 был получен."
+msgid "The file \"<span class=\"mono\">%1</span>\" was picked up."
+msgstr "Файл \"<span class=\"mono\">%1</span>\" был получен."
 
 msgid "%1 made the pick-up from %2."
 msgstr "%1 полчил файл от %2."
-
-msgid "The file %1 was picked up by %2."
-msgstr "Файл %1 был получен %2."
-
-msgid "You will not be notified about any further pick-ups of files in this drop-off by this recipient."
-msgstr "Вы не будете уведомлены о каких-либо дальнейших передаваемых файлах в этой Отправке этим получателем."
-
-msgid "Note"
-msgstr "Сообщение"
-
-msgid "The file \"<span class=\"mono\">%1</span>\" was picked up."
-msgstr "Файл \"<span class=\"mono\">%1</span>\" был получен."
 
 msgid "The file \"<span class=\"mono\">%1</span>\" was picked up by %2."
 msgstr "Файл \"<span class=\"mono\">%1</span>\" был получен %2."
@@ -1277,8 +1364,17 @@ msgstr "Файл \"<span class=\"mono\">%1</span>\" был получен %2."
 msgid "Note: You will not be notified about any further pick-ups of files in this drop-off by this recipient."
 msgstr "Вы не будете уведомлены о каких-либо дальнейших передаваемых файлах в этой Отправке этим получателем."
 
-msgid "There are no drop-offs available for you at this time."
-msgstr "В данный момент у вас нет никаких Отправок."
+msgid "Note"
+msgstr "Сообщение"
+
+msgid "The file %1 was picked up."
+msgstr "Файл %1 был получен."
+
+msgid "The file %1 was picked up by %2."
+msgstr "Файл %1 был получен %2."
+
+msgid "You will not be notified about any further pick-ups of files in this drop-off by this recipient."
+msgstr "Вы не будете уведомлены о каких-либо дальнейших передаваемых файлах в этой Отправке этим получателем."
 
 msgid "Global Drop-off List"
 msgstr "Глобальный список"
@@ -1286,50 +1382,8 @@ msgstr "Глобальный список"
 msgid "There are no drop-offs available at this time."
 msgstr "В данный момент у вас нет никаких Отправок."
 
-msgid "Please prove you are a person"
-msgstr "Пожалуйста, докажите, что вы человек"
-
-msgid "To confirm that you are a <em>real</em> person (and not a computer), please complete the quick challenge below then click \"Pick-up Files\":"
-msgstr "Чтобы подтвердить, что вы являетесь реальным человеком (а не компьютером), пожалуйста, выполните быструю задачу ниже, а затем нажмите кнопку \"Получить файл(ы)\":"
-
-msgid "Send the Request"
-msgstr "Отправить запрос"
-
-msgid "Show the Link"
-msgstr "Показать ссылку"
-
-msgid "Please enter the recipient's name first!"
-msgstr "Пожалуйста, введите сначала имя получателя!"
-
-msgid "Please enter the recipient's email address first!"
-msgstr "Пожалуйста, введите сначала адрес электронной почты получателя!"
-
-msgid "Please enter the email subject first!"
-msgstr "Пожалуйста, укажите сначала тему письма!"
-
-msgid "Your note is too long!"
-msgstr "Ваше сообщение слишком длинное!"
-
-msgid "Optional: if you select this and set a passphrase, the drop-off will be encrypted. The person sending the files will never know the passphrase."
-msgstr "Необязательно: если вы выберете этот параметр и зададите парольную фразу, раскрывающийся список будет зашифрован. Человек, отправляющий файлы, никогда не узнает пароль."
-
-msgid "This is normally selected. If you deselect it, the link and instructions will not be sent by email. Instead you will just be shown the link they need, so you can send it by other means."
-msgstr "Это обычно выбирается. Если вы снимите этот флажок, ссылка и инструкции не будут отправлены по электронной почте. Вместо этого вам просто будет показана ссылка, которая им нужна, чтобы вы могли отправить ее другим способом."
-
-msgid "This web page will allow you to send a request to one of more other people requesting that they send (upload) one or more files for you.  The recipient will receive an automated email containing the information you enter below and instructions for uploading the file(s)."
-msgstr "Эта веб-страница позволит вам отправить запрос одному или нескольких других людей с просьбой отправить (загрузить) один или несколько файлов для вас. Получатель получит автоматическое электронное письмо, содержащее информацию, которую вы вводите ниже, и инструкции по загрузке файла(ов)."
-
-msgid "Email(s)"
-msgstr "Письмо(а)"
-
-msgid "Send email"
-msgstr "Отправить письмо"
-
-msgid "This will be sent to the recipient. It will also be included in the resulting drop-off sent to you."
-msgstr "Это будет отправлено получателю."
-
-msgid "Do not lose or forget this passphrase!"
-msgstr "Не теряйте и не забывайте этот пароль!"
+msgid "There are no drop-offs available for you at this time."
+msgstr "В данный момент у вас нет никаких Отправок."
 
 msgid "This is a request from %1 of %2."
 msgstr "Это зпрос от %1 на %2."
@@ -1340,8 +1394,12 @@ msgstr "Это запрос от %1."
 msgid "Please click on the link below and drop off the file or files I have requested."
 msgstr "Пожалуйста, нажмите на ссылку ниже и передайте файл или файлы, которые были запрошены."
 
-msgid "The link is only valid for %1 from the time of this email."
+#, fuzzy
+msgid "The link is only valid from %1 to %2."
 msgstr "Ссылка действительна только для %1 с момента отправки этого письма."
+
+msgid "After that time it will automatically expire."
+msgstr ""
 
 msgid "All files you upload will be automatically encrypted."
 msgstr "Все файлы, которые вы загружаете, будут автоматически зашифрованы."
@@ -1361,11 +1419,15 @@ msgstr "Скопировано"
 msgid "The request for a Drop-off has been sent to %1 at %2."
 msgstr "Запрос на Отправку был отправлен %1, %2."
 
-msgid "It is valid for %1."
+#, fuzzy
+msgid "It is valid from %1 to %2."
 msgstr "Действителен для %1."
 
 msgid "The files they send you will be encrypted with the passphrase you just entered. Do not lose it or you will not be able to access the files!"
 msgstr "Файлы, которые будут отправлены вам, будут зашифрованы с помощью пароля, который вы только что ввели. Не теряйте его, иначе вы не сможете получить доступ к файлам!"
+
+msgid "You can see outstanding requests highlighted in yellow in your Inbox."
+msgstr ""
 
 msgid "If the recipient wants to send files to you before their request arrives, they should"
 msgstr "Если получатели запроса хотят отправить вам файлы, они могут"
@@ -1390,6 +1452,72 @@ msgstr "Запрос на удаление для %1 в %2 был создан."
 
 msgid "The link to give them is %1"
 msgstr "Ссылка, чтобы дать им %1"
+
+msgid "Send the Request"
+msgstr "Отправить запрос"
+
+msgid "Show the Link"
+msgstr "Показать ссылку"
+
+msgid "Please enter the recipient's email address first!"
+msgstr "Пожалуйста, введите сначала адрес электронной почты получателя!"
+
+msgid "Please enter the email subject first!"
+msgstr "Пожалуйста, укажите сначала тему письма!"
+
+msgid "Your note is too long!"
+msgstr "Ваше сообщение слишком длинное!"
+
+#, fuzzy
+msgid "Your request must expire after it starts!"
+msgstr "Ваш срок действия кода запроса истек. Пожалуйста, начните снова."
+
+msgid "Optional: if you select this and set a passphrase, the drop-off will be encrypted. The person sending the files will never know the passphrase."
+msgstr "Необязательно: если вы выберете этот параметр и зададите парольную фразу, раскрывающийся список будет зашифрован. Человек, отправляющий файлы, никогда не узнает пароль."
+
+msgid "This is normally selected. If you deselect it, the link and instructions will not be sent by email. Instead you will just be shown the link they need, so you can send it by other means."
+msgstr "Это обычно выбирается. Если вы снимите этот флажок, ссылка и инструкции не будут отправлены по электронной почте. Вместо этого вам просто будет показана ссылка, которая им нужна, чтобы вы могли отправить ее другим способом."
+
+msgid "Multiple email addresses should be separated with a comma \",\" or semicolon \";\". Each recipient will be sent a different link."
+msgstr ""
+
+#, fuzzy
+msgid "Use this form to send a request to one of more other people requesting that they send (upload) one or more files for you.  The recipient will receive an automated email containing the information you enter below and instructions for uploading the file(s)."
+msgstr "Эта веб-страница позволит вам отправить запрос одному или нескольких других людей с просьбой отправить (загрузить) один или несколько файлов для вас. Получатель получит автоматическое электронное письмо, содержащее информацию, которую вы вводите ниже, и инструкции по загрузке файла(ов)."
+
+#, fuzzy
+msgid "Unless you change the dates or times below, the request created will be valid for %1."
+msgstr "Созданный запрос будет действителен для %1."
+
+msgid "Email(s)"
+msgstr "Письмо(а)"
+
+#, fuzzy
+msgid "Name: adds to your address book"
+msgstr "Добавить в адресную книгу"
+
+#, fuzzy
+msgid "One or more email addresses"
+msgstr "Ваш адрес электоронной почты"
+
+msgid "Subject line of the email"
+msgstr ""
+
+#, fuzzy
+msgid "Drop-off must occur between"
+msgstr "Отправка не зашифрована"
+
+msgid "and"
+msgstr "и"
+
+msgid "This will be sent to the recipient. It will also be included in the resulting drop-off sent to you."
+msgstr "Это будет отправлено получателю."
+
+msgid "Send email"
+msgstr "Отправить письмо"
+
+msgid "Do not lose or forget this passphrase!"
+msgstr "Не теряйте и не забывайте этот пароль!"
 
 msgid "The drop-off was successfully re-sent to its recipients."
 msgstr "Передача была успешно повторно отправлена получателям."
@@ -1421,6 +1549,9 @@ msgstr "Более того, загруженные данные хранятс�
 msgid "Do you really want to delete this dropoff?"
 msgstr "Вы действительно хотите удалить эту передачу?"
 
+msgid "This one-time link has been used"
+msgstr ""
+
 msgid "Warning: Zip files of this size will probably not open on a Mac by double-clicking them. You will have to use another app, or else the 'unzip' or 'ditto' commands in a Terminal window."
 msgstr "Предупреждение: Zip-файлы такого размера, вероятно, не откроются на Mac, дважды щелкнув на них. Вам придется использовать другое приложение, или же команды 'unzip' или 'ditto' в Terminal window."
 
@@ -1450,7 +1581,7 @@ msgstr "Резюме Отправки"
 
 msgid ""
 "This is a terms and conditions waiver that recipients must agree to.\n"
-"    <br/>To switch it on/off, see the settings <tt>showRecipientsWaiverCheckbox</tt> and <tt>defaultRecipientsWaiver</tt> in <tt>/opt/zendto/config/preferences.php</tt>.\n"
+"    <br/>To disable it, see the settings <tt>showRecipientsWaiverCheckbox</tt> and <tt>defaultRecipientsWaiver</tt> in <tt>/opt/zendto/config/preferences.php</tt>.\n"
 "    <br/>It can be long and may contain HTML tags.\n"
 "    <br/>To change this text:\n"
 "    <ol>\n"
@@ -1474,15 +1605,29 @@ msgstr ""
 msgid "Your files have been sent successfully."
 msgstr "Ваши файлы были успешно отправлены."
 
+msgid "The recipient will only be able to download each file once.<br/>To refresh the links so they can try again, \"Resend\" the drop-off from your %1 Outbox."
+msgstr "Получатель сможет загрузить каждый файл только один раз.<br/>Чтобы обновить ссылки и повторить попытку, «повторно отправьте» полученное сообщение из %1 исходящих."
+
 msgid "This drop-off is encrypted."
 msgstr "Эта передача зашифрована."
+
+msgid "This drop-off was set to be downloaded only once, and all the files in it have now been downloaded once."
+msgstr "Это выпадение было настроено на загрузку только один раз, и теперь все файлы в нем были загружены один раз."
 
 msgid "Click on a filename to download that file."
 msgstr "Нажмите на название файла, чтобы загрузить этот файл."
 
-#, fuzzy
 msgid "This drop-off will expire in %1."
-msgstr "Эта передача зашифрована."
+msgstr "Срок возврата истекает через %1."
+
+msgid "Note: you may only download each file once. Struck-out files have already been downloaded."
+msgstr "Примечание: вы можете загрузить каждый файл только один раз. Вычеркнутые файлы уже загружены."
+
+msgid "This drop-off only allows 1 download of each file."
+msgstr "Это выпадение разрешает только 1 загрузку каждого файла."
+
+msgid "To refresh the links so they can try to download them again, click the \"Resend Dropoff\" button above."
+msgstr "Чтобы обновить ссылки, чтобы они могли попытаться загрузить их снова, нажмите кнопку «Отправить повторно» выше."
 
 msgid "%1 file"
 msgstr "%1 файл"
@@ -1526,6 +1671,30 @@ msgstr "1 наводка"
 msgid "None of the files has been picked-up yet."
 msgstr "Ни один файл еще не был принят."
 
+msgid "Do you really want to delete this request?"
+msgstr "Вы действительно хотите удалить этот запрос?"
+
+msgid "Delete Request"
+msgstr "Удалить запрос"
+
+msgid "Resend Request"
+msgstr "Отправить запрос повторно"
+
+msgid "Request Summary"
+msgstr "Сводка запроса"
+
+msgid "For the recipient."
+msgstr "Для получателя."
+
+msgid "It will also be included in the resulting drop-off sent to you."
+msgstr "Он также будет включен в итоговую отправку вам."
+
+msgid "To send the request to someone, send them this link %1, or else the Request code:"
+msgstr "Чтобы отправить кому-либо запрос, отправьте ему эту ссылку% 1 или код запроса:"
+
+msgid "Request code"
+msgstr "Код запроса"
+
 msgid "View stats for the"
 msgstr "Просмотр статистики для"
 
@@ -1567,6 +1736,21 @@ msgstr "Разблокировать выбранных пользователе
 
 msgid "There are no locked users."
 msgstr "Нет заблокированных пользователей."
+
+msgid "You have asked us to send you this message so that you can drop-off some files for someone."
+msgstr "Вы попросили отправить вам это соообщение, чтобы вы могли передать кому-то файлы."
+
+msgid "IGNORE THIS MESSAGE IF YOU WERE NOT IMMEDIATELY EXPECTING IT!"
+msgstr "ИГНОРИРУЙТЕ ЭТО СООБЩЕНИЕ, ЕСЛИ ВЫ НЕ ОЖИДАЛИ ЕГО СРАЗУ!"
+
+msgid "Otherwise, continue the process by clicking the following link (or copying and pasting it into your web browser):"
+msgstr "В противном случае продолжите процесс, перейдя по следующей ссылке (или скопировав и вставив ее в веб-браузер):"
+
+msgid "Now wait for the email message from the %1 service to arrive and click on the link in it."
+msgstr "Теперь дождитесь сообщения от %1 сервиса, затем кликните на сслыку в нем."
+
+msgid "You will be directed to the <a href=\"%1\">main menu</a> in a moment."
+msgstr "Вы будете перенаправлены в <a href=\"%1\">главное меню </a> через несколько секунд."
 
 msgid "Please enter your Request Code before submitting."
 msgstr "Пожалуйста, введите ваш код запроса перед отправкой."
@@ -1616,20 +1800,12 @@ msgstr "Когда вы получите его через минуту или �
 msgid "Send confirmation"
 msgstr "Отправьте подтверждение"
 
-msgid "You have asked us to send you this message so that you can drop-off some files for someone."
-msgstr "Вы попросили отправить вам это соообщение, чтобы вы могли передать кому-то файлы."
+#, fuzzy
+#~ msgid "Failed to send email to the recipient %s (%d). But your drop-off has been stored with claimID %s"
+#~ msgstr "Не удалось отправить электронное письмо получателю %s. но ваше сообщение было сохранено с Идентификатором %s"
 
-msgid "IGNORE THIS MESSAGE IF YOU WERE NOT IMMEDIATELY EXPECTING IT!"
-msgstr "ИГНОРИРУЙТЕ ЭТО СООБЩЕНИЕ, ЕСЛИ ВЫ НЕ ОЖИДАЛИ ЕГО СРАЗУ!"
-
-msgid "Otherwise, continue the process by clicking the following link (or copying and pasting it into your web browser):"
-msgstr "В противном случае продолжите процесс, перейдя по следующей ссылке (или скопировав и вставив ее в веб-браузер):"
-
-msgid "Now wait for the email message from the %1 service to arrive and click on the link in it."
-msgstr "Теперь дождитесь сообщения от %1 сервиса, затем кликните на сслыку в нем."
-
-msgid "You will be directed to the <a href=\"%1\">main menu</a> in a moment."
-msgstr "Вы будете перенаправлены в <a href=\"%1\">главное меню </a> через несколько секунд."
+#~ msgid "Please enter the recipient's name first!"
+#~ msgstr "Пожалуйста, введите сначала имя получателя!"
 
 #~ msgid "%1 <%2> has dropped off %3 for you."
 #~ msgstr "%1 <%2> сохранил %3 для вас."

@@ -10,10 +10,10 @@ ENV PHP_OPCACHE_REVALIDATE_FREQUENCY="0"
 ENV PHP_OPCACHE_VALIDATE_TIMESTAMPS="0"
 
 # Zendto version var
-ARG ZENDTO_VERSION=6.03-5
+ARG ZENDTO_VERSION=6.11-2
 
 LABEL description="Zendto docker container" \
-      tags="build-0.1" \
+      tags="build-0.2" \
       maintainer="fle108 <33028922+fle108@users.noreply.github.com"
 
 # define locale en_US and install other locales
