@@ -5,7 +5,7 @@
 ## Zendto: container file sharing platform
 
 dockerfile use `ubuntu:20.04` base image with complete setup of php7.4 and apache2. \
-Zendto package is downloaded from original zendto deb repository <https://zend.to/files/zendto_6.03-5.deb>
+Zendto package is downloaded from original zendto deb repository <https://zend.to/files/zendto_6.11-2.deb>
 
 *For any question about the app itself, please refer to original zendto developer website documentation at <https://zend.to> it's very well done (app and doc 😉 )* \
 *eveything is realy well explained*
@@ -96,7 +96,7 @@ check full [preferences.php](./config/preferences.php) and especially `smtp` set
 'SMTPsetFromToSender' => FALSE,
 ```
 
-[docker]:https://img.shields.io/badge/dockerfile-build--0.2-blue?logo=docker
+[docker]:https://img.shields.io/badge/dockerfile-v0.2-blue?logo=docker
 
 [php]:https://img.shields.io/badge/php-7.4-blueviolet?logo=php
 
